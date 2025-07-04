@@ -1,0 +1,482 @@
+
+        /* =================================
+           RESET & VARIABEL GLOBAL
+        ================================= */
+        :root {
+            --primary-color: #208197;
+            --secondary-color: #D26E11;
+            --dark-color: #1F1F1F;
+            --light-color: #FFFFFF;
+            --gray-color: #F7F7F7;
+            --font-primary: 'Montserrat', sans-serif;
+            --font-secondary: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1192px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+        }
+
+        p {
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* =================================
+           KOMPONEN UTAMA (BUTTONS)
+        ================================= */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-weight: 700;
+            font-size: 16px;
+            border-radius: 4px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn--dark {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            border: 2px solid var(--dark-color);
+        }
+
+        .btn--dark:hover {
+            background-color: #333;
+        }
+        
+        .btn--outline {
+            background-color: transparent;
+            color: var(--dark-color);
+            border: 2px solid var(--dark-color);
+        }
+
+        .btn--outline:hover {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+
+        /* =================================
+           HEADER & NAVIGASI
+        ================================= */
+        .header {
+            background-color: var(--primary-color);
+            padding: 24px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-secondary);
+            font-size: 30px;
+        }
+
+        .logo__main {
+            font-weight: 800;
+            color: var(--dark-color);
+        }
+
+        .logo__secondary {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-size: 18px;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* =================================
+           HERO SECTION
+        ================================= */
+        .hero {
+            background-color: var(--primary-color);
+            padding: 64px 0 80px 0;
+            text-align: left;
+        }
+        
+        .hero .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hero__content {
+            max-width: 60%;
+        }
+
+        .hero__subtitle {
+            font-size: 20px;
+        }
+
+        .hero__title {
+            font-size: 48px;
+            line-height: 1.5;
+            margin: 16px 0;
+        }
+        
+        .hero__title .highlight {
+            color: var(--secondary-color);
+        }
+
+        .hero__description {
+            font-size: 16px;
+            margin-bottom: 48px;
+        }
+
+        .hero__buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .hero__visual {
+            font-family: var(--font-secondary);
+            font-size: 15rem; /* Ukuran disesuaikan agar tidak terlalu dominan */
+            font-weight: 700;
+            position: relative;
+            color: rgba(255, 255, 255, 0.5);
+            user-select: none;
+        }
+
+        .hero__visual .highlight {
+            color: var(--secondary-color);
+        }
+
+
+        /* =================================
+           SECTION UMUM
+        ================================= */
+        .section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .section--dark {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+
+        .section--gray {
+            background-color: var(--gray-color);
+        }
+        
+        .section--primary {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+        }
+
+        .section__title {
+            font-size: 36px;
+            margin-bottom: 24px;
+        }
+
+        .section__description {
+            max-width: 810px;
+            margin: 0 auto 48px auto;
+            font-size: 16px;
+        }
+
+        /* =================================
+           TENTANG & STATS SECTION
+        ================================= */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 64px;
+            margin-top: 64px;
+        }
+
+        .stat-item {
+            flex: 1;
+        }
+
+        .stat-item__number {
+            font-size: 64px;
+            color: var(--primary-color);
+        }
+
+        .stat-item__label {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        /* =================================
+   TENTANG SECTION (BARU)
+================================= */
+.about-content {
+    display: flex; /* Membuat elemen di dalamnya sejajar */
+    align-items: center; /* Menyelaraskan secara vertikal di tengah */
+    gap: 48px; /* Memberi jarak antara foto dan teks */
+    text-align: left; /* Membuat teks rata kiri */
+    margin-bottom: 64px; /* Memberi jarak ke bagian stats di bawahnya */
+}
+
+.about-content__image {
+    flex-shrink: 0; /* Mencegah gambar menyusut */
+}
+
+.about-content__image img {
+    width: 300px; /* Atur lebar foto Anda */
+    height: 300px; /* Atur tinggi foto Anda */
+    border-radius: 50%; /* Membuat foto menjadi bulat (opsional, tapi keren!) */
+    object-fit: cover; /* Memastikan foto mengisi area tanpa distorsi */
+    border: 5px solid var(--primary-color); /* Memberi bingkai (opsional) */
+}
+
+.about-content__text {
+    flex: 1; /* Membiarkan teks mengisi sisa ruang yang ada */
+}
+
+/* Penyesuaian untuk layar kecil/mobile */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Menumpuk gambar di atas teks */
+        text-align: center; /* Mebuat teks kembali ke tengah */
+    }
+}
+        /* =================================
+           PASSION & PORTFOLIO CARDS
+        ================================= */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            text-align: left;
+            margin-top: 64px;
+        }
+        
+        .card {
+            padding: 16px;
+        }
+
+        .card__icon { /* Placeholder untuk ikon */
+            height: 54px;
+            width: 54px;
+            border: 2px solid var(--secondary-color);
+            margin-bottom: 24px;
+        }
+
+        .card__title {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .card__description {
+            font-size: 14px;
+        }
+
+        .portfolio-card {
+            background: var(--light-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .portfolio-card__image {
+             height: 300px;
+             width: 100%;
+             background-color: #e0e0e0; /* Placeholder color */
+             object-fit: cover;
+        }
+
+        .portfolio-card__content {
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        
+        .portfolio-card__title {
+            font-size: 20px;
+        }
+        
+        .portfolio-card__category {
+            font-size: 14px;
+        }
+
+        /* =================================
+           SKILLS SECTION
+        ================================= */
+        .skills-container {
+            display: flex;
+            gap: 120px;
+            text-align: left;
+            margin-top: 64px;
+        }
+
+        .skills-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .skill-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .skill-item__label {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .skill-bar-container {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .skill-bar {
+            width: 100%;
+            height: 6px;
+            background-color: #E1E1E1;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .skill-bar__level {
+            height: 100%;
+            background-color: var(--dark-color);
+            border-radius: 3px;
+        }
+
+        .skill-item__percentage {
+            font-weight: 700;
+        }
+        
+        /* =================================
+           FOOTER
+        ================================= */
+        .footer {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            padding: 64px 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 48px;
+        }
+
+        .footer-nav {
+            display: flex;
+            align-items: center;
+            gap: 64px;
+        }
+        
+        .footer-nav__links {
+            display: flex;
+            gap: 32px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .footer .logo {
+            font-size: 36px;
+        }
+
+        .footer .logo__main {
+            color: var(--light-color);
+        }
+        
+        .footer-socials {
+             text-align: center;
+        }
+        
+        .footer-socials p {
+            margin-bottom: 16px;
+        }
+.btn.clicked {
+    transform: scale(0.95); /* Sedikit mengecilkan tombol */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Menambah bayangan agar terlihat ditekan */
+}
+        /* =================================
+           RESPONSIVE DESIGN
+        ================================= */
+        @media (max-width: 992px) {
+            .nav-links, .nav-cta {
+                display: none; /* Sembunyikan untuk simplisitas, butuh JS untuk menu burger */
+            }
+            .hero .container {
+                flex-direction: column;
+                gap: 48px;
+                text-align: center;
+            }
+            .hero__content {
+                max-width: 100%;
+            }
+            .hero__buttons {
+                justify-content: center;
+            }
+            .hero__visual {
+                display: none; /* Sembunyikan visual besar di mobile */
+            }
+            .stats {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .skills-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .footer-nav {
+                flex-direction: column;
+                gap: 32px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section__title {
+                font-size: 28px;
+            }
+            .hero__title {
+                font-size: 36px;
+            }
+        }
